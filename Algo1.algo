@@ -1,0 +1,24 @@
+ALGORITHM Work 1
+VAR
+    sm;sv,L,i: INTEGER
+        St : STRING
+BEGIN
+    write ("the sentence")
+    read (ch)
+    L:=0
+    sv:=0
+    sm:=1
+    FOR i := 1 to length(ch) do
+    IF (ch[i]<> " ") THEN
+    L:=L+1
+    ELSE_IF (upcase(ch[i]in['A'E'I'O'U'Y'])) THEN 
+    sv:=sv+1
+    ELSE_IF(ch[i]=" ") THEN
+    sm:=sm+1
+    END_IF
+    END_IF
+        write('number of words:',sm)
+        write('number of vowels:',sv)
+        write('length:',L)
+
+END
